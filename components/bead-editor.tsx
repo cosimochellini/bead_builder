@@ -2,16 +2,16 @@
 
 import type React from "react"
 
-import { useState, useRef, useEffect } from "react"
-import { Download, Eraser, Image, Redo, Square, Undo, Upload } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { ColorPalette } from "./color-palette"
+import { defaultPalette } from "@/lib/colors"
+import { Download, Eraser, Redo, Square, Undo, Upload } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 import { BeadGrid } from "./bead-grid"
 import { BeadPreview } from "./bead-preview"
-import { defaultPalette } from "@/lib/colors"
+import { ColorPalette } from "./color-palette"
 
 export default function BeadEditor() {
   const [gridSize, setGridSize] = useState({ width: 20, height: 20 })
@@ -341,4 +341,3 @@ export default function BeadEditor() {
     </div>
   )
 }
-
